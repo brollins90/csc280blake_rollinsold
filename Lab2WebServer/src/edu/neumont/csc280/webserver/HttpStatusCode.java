@@ -18,9 +18,9 @@ public enum HttpStatusCode {
 	public String getString() {
 		return string;
 	}
-	
+
 	public static HttpStatusCode GetByValue(int value) {
-		for(HttpStatusCode c : values()) {
+		for (HttpStatusCode c : values()) {
 			if (c.value == value) {
 				return c;
 			}

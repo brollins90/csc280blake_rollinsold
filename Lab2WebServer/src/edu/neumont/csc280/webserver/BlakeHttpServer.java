@@ -29,7 +29,7 @@ public class BlakeHttpServer implements Runnable {
 				} catch (IOException e) {
 					System.out.println("Error connecting to a new client");
 				}
-				new Thread(new BlakeHttpServerRunnable(clientSocket)).start();
+				new Thread(new BlakeHttpServerWorker(clientSocket)).start();
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

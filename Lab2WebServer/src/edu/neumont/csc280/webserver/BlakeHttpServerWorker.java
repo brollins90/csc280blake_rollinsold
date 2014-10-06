@@ -9,7 +9,7 @@ import java.security.InvalidParameterException;
 
 import edu.neumont.servlet.HttpResponse;
 
-public class BlakeHttpServerRunnable implements Runnable {
+public class BlakeHttpServerWorker implements Runnable {
 
 	private Socket socket;
 	private BufferedReader in;
@@ -19,7 +19,7 @@ public class BlakeHttpServerRunnable implements Runnable {
 	private static ItemHttpHandler itemHandler = new ItemHttpHandler();
 	private static ImageHttpHandler imageHandler = new ImageHttpHandler();
 
-	public BlakeHttpServerRunnable(Socket socket) {
+	public BlakeHttpServerWorker(Socket socket) {
 		this.socket = socket;
 	}
 
